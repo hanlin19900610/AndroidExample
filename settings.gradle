@@ -1,0 +1,2 @@
+include ':app', ':example:fragmentlazydemo'
+rootProject.name='AndroidExample'
