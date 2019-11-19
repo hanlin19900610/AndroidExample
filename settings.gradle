@@ -1,2 +1,3 @@
-include ':app', ':example:fragmentlazydemo'
+include ':app', ':example:fragmentlazydemo', ':example:paging-with-network-demo'
+include 'mvvmlib'
 rootProject.name='AndroidExample'
