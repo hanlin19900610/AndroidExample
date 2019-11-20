@@ -22,7 +22,7 @@ class MainActivity : BaseVMActivity<MainViewModel, ActivityMainBinding>() {
         }
 
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = BlogAdapter()
+        adapter = BlogAdapter(viewModel)
         recyclerView.adapter = adapter
     }
 

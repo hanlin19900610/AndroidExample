@@ -4,6 +4,7 @@ import androidx.paging.Config
 import androidx.paging.PagedList
 import androidx.paging.toLiveData
 import com.mufeng.mvvmlib.basic.BaseViewModel
+import com.mufeng.mvvmlib.binding.BindingCommand2
 import com.mufeng.paging_with_network_demo.db.Article
 import com.mufeng.paging_with_network_demo.db.Blog
 import com.mufeng.paging_with_network_demo.db.asBlog
@@ -60,6 +61,13 @@ class MainViewModel : BaseViewModel(){
             }
             blogDao.insertBlog(datas.asBlog())
         }
+    }
+
+    val itemClick = object : BindingCommand2<Blog, Int> {
+        override fun apply(blog: Blog, position: Int) {
+            toast("第${position}项的点击事件")
+        }
+
     }
 
 }

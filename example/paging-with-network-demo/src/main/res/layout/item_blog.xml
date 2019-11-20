@@ -5,6 +5,10 @@
         <variable
             name="blog"
             type="com.mufeng.paging_with_network_demo.db.Blog" />
+
+        <variable
+            name="viewModel"
+            type="com.mufeng.paging_with_network_demo.ui.MainViewModel" />
     </data>
 
     <LinearLayout

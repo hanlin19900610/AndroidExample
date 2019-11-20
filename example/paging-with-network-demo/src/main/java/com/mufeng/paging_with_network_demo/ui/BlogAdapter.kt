@@ -13,7 +13,8 @@ import com.mufeng.paging_with_network_demo.db.Blog
  * @创建时间 2019/11/19 13:47
  * @描述
  */
-class BlogAdapter : PagedListAdapter<Blog, BlogAdapter.BlogViewHolder>(diffCallBack){
+class BlogAdapter(val viewModel: MainViewModel) : PagedListAdapter<Blog, BlogAdapter.BlogViewHolder>(diffCallBack){
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BlogViewHolder {
         val itemBinding = ItemBlogBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return BlogViewHolder(itemBinding)
@@ -35,9 +36,10 @@ class BlogAdapter : PagedListAdapter<Blog, BlogAdapter.BlogViewHolder>(diffCallB
         }
     }
 
-    class BlogViewHolder(private val binding: ItemBlogBinding): RecyclerView.ViewHolder(binding.root){
+    inner class BlogViewHolder(private val binding: ItemBlogBinding): RecyclerView.ViewHolder(binding.root){
         fun bindTo(blog: Blog?) {
             binding.blog = blog
+            binding.viewModel = viewModel
         }
     }
 
