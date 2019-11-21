@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/example" />
             <option value="$PROJECT_DIR$/example/fragmentlazydemo" />
             <option value="$PROJECT_DIR$/example/paging-with-network-demo" />
+            <option value="$PROJECT_DIR$/example/roomdemo" />
             <option value="$PROJECT_DIR$/mvvmlib" />
           </set>
         </option>
